@@ -71,8 +71,6 @@ VAL_IMAGE_DIR="${OUTPUT_DIR}/val${YEAR}"
 
 COMMON_DIR="all$YEAR"
 mkdir -p "${COMMON_DIR}"
-for i in ${TRAIN_IMAGE_DIR}/*; do cp --symbolic-link "$i" ${COMMON_DIR}/; done
-for i in ${VAL_IMAGE_DIR}/*; do cp --symbolic-link "$i" ${COMMON_DIR}/; done
 
 # Download the annotations.
 BASE_INSTANCES_URL="http://images.cocodataset.org/annotations"
